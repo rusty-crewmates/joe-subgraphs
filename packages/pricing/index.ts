@@ -7,9 +7,9 @@ import {
   BIG_INT_ZERO,
   FACTORY_ADDRESS,
   JOE_TOKEN_ADDRESS,
-  JOE_USDT_PAIR_ADDRESS,
+  JOE_USDC_PAIR_ADDRESS,
   TRADERJOE_START_BLOCK,
-  TRADERJOE_WAVAX_USDT_PAIR_ADDRESS,
+  TRADERJOE_WAVAX_USD_BASE_PAIR_ADDRESS,
   USDT_ADDRESS,
   WAVAX_ADDRESS,
 } from 'const'
@@ -23,15 +23,11 @@ export function getUSDRate(token: Address, block: ethereum.Block): BigDecimal {
     return BIG_DECIMAL_ONE
   }
 
-  // TODO: add fallback WAVAX_USDT_PAIR_ADDRESS e.g. on pangolin
-  //    let address = block.number.le(BigInt.fromI32(10829344))
-  //      ? UNISWAP_WETH_USDT_PAIR_ADDRESS
-  //      : SUSHISWAP_WETH_USDT_PAIR_ADDRESS
   if (block.number.le(TRADERJOE_START_BLOCK)) {
     return BIG_DECIMAL_ZERO
   }
 
-  let address = TRADERJOE_WAVAX_USDT_PAIR_ADDRESS
+  let address = TRADERJOE_WAVAX_USD_BASE_PAIR_ADDRESS
 
   const tokenPriceAVAX = getAvaxRate(token, block)
 
@@ -110,7 +106,7 @@ export function getJoePrice(block: ethereum.Block): BigDecimal {
   //    if (block.number.le(SOME_BLOCK)) {
   //        pair = PairContract.bind(SOME_ADDRESS)
   //    }
-  const pair = PairContract.bind(JOE_USDT_PAIR_ADDRESS)
+  const pair = PairContract.bind(JOE_USDC_PAIR_ADDRESS)
 
   const reservesResult = pair.try_getReserves()
   if (reservesResult.reverted) {

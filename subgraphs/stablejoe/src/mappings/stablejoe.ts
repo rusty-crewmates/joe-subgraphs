@@ -3,9 +3,8 @@ import {
   BIG_DECIMAL_1E18,
   BIG_DECIMAL_1E6,
   BIG_DECIMAL_ZERO,
-  JOE_USDT_PAIR_ADDRESS,
-  USDC_ADDRESS,
-  USDC_E_ADDRESS,
+  JOE_USDC_PAIR_ADDRESS,
+  USDC_ADDRESS
 } from 'const'
 import {
   ClaimReward as ClaimRewardEvent,
@@ -18,7 +17,7 @@ import { Pair as PairContract } from '../../generated/StableJoeStaking/Pair'
 import { getStableJoeDayData } from '../entities'
 
 function getJoePrice(): BigDecimal {
-  const pair = PairContract.bind(JOE_USDT_PAIR_ADDRESS)
+  const pair = PairContract.bind(JOE_USDC_PAIR_ADDRESS)
   const reservesResult = pair.try_getReserves()
   if (reservesResult.reverted) {
     log.info('[getJoePrice] getReserves reverted', [])
@@ -107,7 +106,7 @@ export function handleClaimReward(event: ClaimRewardEvent): void {
   stableJoe.save()
 
   // update day data
-  if (USDC_ADDRESS === event.params.rewardToken || USDC_E_ADDRESS === event.params.rewardToken) {
+  if (USDC_ADDRESS === event.params.rewardToken) {
     let stableJoeDayData = getStableJoeDayData(event.address, event.block)
     stableJoeDayData.usdHarvested = stableJoeDayData.usdHarvested.plus(convertAmountToDecimal(event.params.amount))
     stableJoeDayData.save()

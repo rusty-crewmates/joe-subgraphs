@@ -51,45 +51,34 @@ export const JOE_MAKER_ADDRESS = Address.fromString('0x861726bfe27931a4e22a7277b
 export const JOE_MAKER_V2_ADDRESS = Address.fromString('0xC98C3C547DDbcc0029F38E0383C645C202aD663d')
 
 // PRICING
-export const TRADERJOE_WAVAX_USDT_PAIR_ADDRESS = Address.fromString('0xed8cbd9f0ce3c6986b22002f03c6475ceb7a6256')
-export const JOE_USDT_PAIR_ADDRESS = Address.fromString('0x1643de2efb8e35374d796297a9f95f64c082a8ce')
+export const TRADERJOE_WAVAX_USD_BASE_PAIR_ADDRESS = Address.fromString('0xf4003f4efbe8691b60249e6afbd307abe7758adb')
+export const JOE_USDC_PAIR_ADDRESS = Address.fromString('0x3bc40d4307cd946157447cd55d70ee7495ba6140')
 
 export const WAVAX_ADDRESS = Address.fromString('0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7')
-export const USDT_ADDRESS = Address.fromString('0xc7198437980c041c805a1edcba50c1ce5db95118')
-export const USDC_E_ADDRESS = Address.fromString('0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664')
+export const USDT_ADDRESS = Address.fromString('0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7')
 export const USDC_ADDRESS = Address.fromString('0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e')
-export const WBTC_ADDRESS = Address.fromString('0x50b7545627a5162f82a992c33b87adc75187b218')
-export const TIME_ADDRESS = Address.fromString('0xb54f16fb19478766a268f172c9480f8da1a7c9c3')
-export const APEX_ADDRESS = Address.fromString('0xd039c9079ca7f2a87d632a9c0d7cea0137bacfb5')
-export const GB_ADDRESS = Address.fromString('0x90842eb834cfd2a1db0b1512b254a18e4d396215')
-export const MYAK_ADDRESS = Address.fromString('0xddaaad7366b455aff8e7c82940c43ceb5829b604')
-export const MIM_ADDRESS = Address.fromString('0x130966628846bfd36ff31a822705796e8cb8c18d')
 
 export const WAVAX_STABLE_PAIRS: string[] = [
-    '0xed8cbd9f0ce3c6986b22002f03c6475ceb7a6256', // WAVAX-USDT
-    '0x87dee1cc9ffd464b79e058ba20387c1984aed86a', // WAVAX-DAI
-    '0xa389f9430876455c36478deea9769b7ca4e3ddb1', // WAVAX-USDC
-    '0x781655d802670bba3c89aebaaea59d3182fd755d', // WAVAX-MIM
+    '0xbb4646a764358ee93c2a9c4a147d5aded527ab73', // WAVAX-USDT
+    '0xf4003f4efbe8691b60249e6afbd307abe7758adb', // WAVAX-USDC
 ]
 
 export const WHITELIST: string[] = [
     '0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7', // WAVAX
     '0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab', // WETH
     '0x50b7545627a5162f82a992c33b87adc75187b218', // WBTC
-    '0xc7198437980c041c805a1edcba50c1ce5db95118', // USDT
-    '0xd586e7f844cea2f87f50152665bcbc2c279d8d70', // DAI
-    '0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664', // USDC
-    '0x130966628846bfd36ff31a822705796e8cb8c18d', // MIM
+    '0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7', // USDT
+    '0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e', // USDC
 ]
 
 // LOCKUP -- TO BE DEPRECATED?
 export const LOCKUP_BLOCK_NUMBER = BigInt.fromI32(10959148)
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('0')
+export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('400000')
 
 // minimum liquidity for price to get tracked
-export const MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('5')
+export const MINIMUM_LIQUIDITY_THRESHOLD_AVAX = BigDecimal.fromString('20')
 
 // MasterChefV2 precision
 export const ACC_JOE_PRECISION = BigInt.fromString('1000000000000')

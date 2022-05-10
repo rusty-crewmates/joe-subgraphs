@@ -13,24 +13,15 @@
   "joe_makerV2_address": "0x0000000000000000000000000000000000000000",
 
   "joe_token_address": "0xce347e069b68c53a9ed5e7da5952529caf8accd4",
-  "joe_usdt_pair_address": "0x961ef01283b7f90b2346f3dcec9d8291bdacae92",
+  "joe_usdc_pair_address": "0x961ef01283b7f90b2346f3dcec9d8291bdacae92",
 
   "wavax_address": "0xc778417e063141139fce010982780140aa0cd5ab",
   "weth_address": "0xc778417e063141139fce010982780140aa0cd5ab",
   "wbtc_address": "0x5b8470fbc6b31038aa07abd3010acffca6e36611",
   "usdt_address": "0x5b8470fbc6b31038aa07abd3010acffca6e36611",
-  "usdc_e_address": "0x5b8470fbc6b31038aa07abd3010acffca6e36611",
   "usdc_address": "0x5b8470fbc6b31038aa07abd3010acffca6e36611",
-  "dai_address": "0x5b8470fbc6b31038aa07abd3010acffca6e36611",
-  "time_address": "0xb54f16fb19478766a268f172c9480f8da1a7c9c3",
-  "apex_address": "0xd039c9079ca7f2a87d632a9c0d7cea0137bacfb5",
-  "myak_address": "0xddaaad7366b455aff8e7c82940c43ceb5829b604",
-  "mim_address": "0x5b8470fbc6b31038aa07abd3010acffca6e36611",
-  "gb_address": "0x90842eb834cfd2a1db0b1512b254a18e4d396215",
   "wavax_usdt_pair_address": "0x63fce17ba68c82a322fdd5a4d03aedbedbd730fd",
-  "wavax_dai_pair_address": "0x63fce17ba68c82a322fdd5a4d03aedbedbd730fd",
   "wavax_usdc_pair_address": "0x63fce17ba68c82a322fdd5a4d03aedbedbd730fd",
-  "wavax_mim_pair_address": "0x63fce17ba68c82a322fdd5a4d03aedbedbd730fd",
   
   "zero_address": "0x0000000000000000000000000000000000000000"
 }

@@ -6,7 +6,7 @@ import {
   BIG_INT_ZERO,
   JOE_BAR_ADDRESS,
   JOE_TOKEN_ADDRESS,
-  JOE_USDT_PAIR_ADDRESS,
+  JOE_USDC_PAIR_ADDRESS,
 } from 'const'
 import { Address, BigDecimal, BigInt, dataSource, ethereum, log } from '@graphprotocol/graph-ts'
 import { Bar, History, User } from '../generated/schema'
@@ -17,7 +17,7 @@ import { JoeToken as JoeTokenContract } from '../generated/JoeBar/JoeToken'
 
 // TODO: Get averages of multiple joe stablecoin pairs
 function getJoePrice(): BigDecimal {
-  const pair = PairContract.bind(JOE_USDT_PAIR_ADDRESS)
+  const pair = PairContract.bind(JOE_USDC_PAIR_ADDRESS)
   const reservesResult = pair.try_getReserves()
   if (reservesResult.reverted) {
     log.info('[getJoePrice] getReserves reverted', [])

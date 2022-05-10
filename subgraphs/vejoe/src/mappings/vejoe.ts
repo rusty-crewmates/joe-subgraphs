@@ -5,7 +5,7 @@ import {
   BIG_DECIMAL_1E18,
   BIG_DECIMAL_1E6,
   BIG_DECIMAL_ZERO,
-  JOE_USDT_PAIR_ADDRESS
+  JOE_USDC_PAIR_ADDRESS
 } from 'const'
 import {
   Claim as ClaimEvent,
@@ -20,7 +20,7 @@ import { Pair as PairContract } from '../../generated/VeJoeStaking/Pair'
 import { getVeJoeDayData } from '../entities'
 
 function getJoePrice(): BigDecimal {
-  const pair = PairContract.bind(JOE_USDT_PAIR_ADDRESS)
+  const pair = PairContract.bind(JOE_USDC_PAIR_ADDRESS)
   const reservesResult = pair.try_getReserves()
   if (reservesResult.reverted) {
     log.info('[getJoePrice] getReserves reverted', [])

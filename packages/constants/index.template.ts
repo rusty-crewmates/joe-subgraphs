@@ -51,25 +51,16 @@ export const JOE_MAKER_ADDRESS = Address.fromString('{{ joe_maker_address }}')
 export const JOE_MAKER_V2_ADDRESS = Address.fromString('{{ joe_makerV2_address }}')
 
 // PRICING
-export const TRADERJOE_WAVAX_USDT_PAIR_ADDRESS = Address.fromString('{{ wavax_usdt_pair_address }}')
-export const JOE_USDT_PAIR_ADDRESS = Address.fromString('{{ joe_usdt_pair_address }}')
+export const TRADERJOE_WAVAX_USD_BASE_PAIR_ADDRESS = Address.fromString('{{ wavax_usdc_pair_address }}')
+export const JOE_USDC_PAIR_ADDRESS = Address.fromString('{{ joe_usdc_pair_address }}')
 
 export const WAVAX_ADDRESS = Address.fromString('{{ wavax_address }}')
 export const USDT_ADDRESS = Address.fromString('{{ usdt_address }}')
-export const USDC_E_ADDRESS = Address.fromString('{{ usdc_e_address }}')
 export const USDC_ADDRESS = Address.fromString('{{ usdc_address }}')
-export const WBTC_ADDRESS = Address.fromString('{{ wbtc_address }}')
-export const TIME_ADDRESS = Address.fromString('{{ time_address }}')
-export const APEX_ADDRESS = Address.fromString('{{ apex_address }}')
-export const GB_ADDRESS = Address.fromString('{{ gb_address }}')
-export const MYAK_ADDRESS = Address.fromString('{{ myak_address }}')
-export const MIM_ADDRESS = Address.fromString('{{ mim_address }}')
 
 export const WAVAX_STABLE_PAIRS: string[] = [
     '{{ wavax_usdt_pair_address }}', // WAVAX-USDT
-    '{{ wavax_dai_pair_address }}', // WAVAX-DAI
     '{{ wavax_usdc_pair_address }}', // WAVAX-USDC
-    '{{ wavax_mim_pair_address }}', // WAVAX-USDC
 ]
 
 export const WHITELIST: string[] = [
@@ -77,19 +68,17 @@ export const WHITELIST: string[] = [
     '{{ weth_address }}', // WETH
     '{{ wbtc_address }}', // WBTC
     '{{ usdt_address }}', // USDT
-    '{{ dai_address }}', // DAI
     '{{ usdc_address }}', // USDC
-    '{{ mim_address }}', // MIM
 ]
 
 // LOCKUP -- TO BE DEPRECATED?
 export const LOCKUP_BLOCK_NUMBER = BigInt.fromI32(10959148)
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('0')
+export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('400000')
 
 // minimum liquidity for price to get tracked
-export const MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('5')
+export const MINIMUM_LIQUIDITY_THRESHOLD_AVAX = BigDecimal.fromString('20')
 
 // MasterChefV2 precision
 export const ACC_JOE_PRECISION = BigInt.fromString('1000000000000')
