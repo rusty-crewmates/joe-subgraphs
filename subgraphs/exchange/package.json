@@ -21,6 +21,7 @@
         "build:fuji": "graph build exchange.fuji.yaml",
 
         "deploy:avax": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ traderjoe-xyz/exchange exchange.avax.yaml",
+        "deploy:next": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ traderjoe-xyz/exchange-next exchange.avax.yaml",
         "deploy:rinkeby": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ traderjoe-xyz/exchange-rinkeby-ii exchange.rinkeby.yaml",
 
         "create-local": "graph create --node http://localhost:8020/ traderjoe-xyz/exchange",
